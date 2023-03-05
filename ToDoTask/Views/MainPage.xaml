@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:ToDoTask.ViewModel"
+             x:Class="ToDoTask.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewmodels:MainViewModel />
+    </ContentPage.BindingContext>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" BackgroundColor="#F5F5F5">
+            <Entry Text="{Binding SearchTitle}" Placeholder="Search by title" Margin="10" BackgroundColor="#EEEEEE" />
+            <ListView ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" Margin="10">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <SwipeView>
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Show" BackgroundColor="Gray"
+                                                   Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodels:MainViewModel}},Path=SwipeShowItemCommand}" 
+                                                   CommandParameter="{Binding .}"/>
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Edit" BackgroundColor="Green"
+                                                   Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodels:MainViewModel}},Path=SwipeEditItemCommand}" 
+                                                   CommandParameter="{Binding .}"/>
+                                        <SwipeItem Text="Delete" BackgroundColor="Red" 
+                                                   Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodels:MainViewModel}},Path=SwipeDeleteItemCommand}" 
+                                                   CommandParameter="{Binding .}" />
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+                                <SwipeView.Content>
+                                    <StackLayout Orientation="Horizontal" Margin="10" HeightRequest="100">
+                                        <StackLayout VerticalOptions="Center">
+                                            <Label Text="{Binding Title}" FontSize="18" TextColor="#212121"/>
+                                            <Label Text="{Binding Description}" FontSize="14" TextColor="#757575"/>
+                                        </StackLayout>
+                                        <Label Text="{Binding Priority}" FontSize="18" VerticalOptions="Center" TextColor="#212121" Margin="10, 0" HorizontalOptions="EndAndExpand"/>
+                                    </StackLayout>
+                                </SwipeView.Content>
+                            </SwipeView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <StackLayout Grid.Row="1" Orientation="Horizontal" Margin="10" VerticalOptions="End">
+            <Button Text="Edit" Command="{Binding EditItemCommand}" VerticalOptions="CenterAndExpand" BackgroundColor="#2196F3" TextColor="White" WidthRequest="60" HeightRequest="40" CornerRadius="20"/>
+            <Button Text="Delete" Command="{Binding DeleteItemCommand}" VerticalOptions="CenterAndExpand" BackgroundColor="#FF4081" TextColor="White" WidthRequest="60" HeightRequest="40" CornerRadius="20" Margin="10, 0"/>
+            <Button Text="Add" Clicked="BtnClkAddTask" VerticalOptions="CenterAndExpand" BackgroundColor="#4CAF50" TextColor="White" WidthRequest="60" HeightRequest="40" CornerRadius="20"/>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

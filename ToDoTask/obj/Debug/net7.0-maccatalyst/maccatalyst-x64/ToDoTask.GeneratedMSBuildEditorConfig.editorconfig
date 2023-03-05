@@ -1,0 +1,59 @@
+is_global = true
+build_property.TargetFramework = net7.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ToDoTask
+build_property.ProjectDir = /Users/sergei/RiderProjects/ToDoTask/ToDoTask/
+
+[/Users/sergei/RiderProjects/ToDoTask/ToDoTask/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoTask.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/sergei/RiderProjects/ToDoTask/ToDoTask/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoTask.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/sergei/RiderProjects/ToDoTask/ToDoTask/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoTask.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/sergei/RiderProjects/ToDoTask/ToDoTask/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoTask.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+
+[/Users/sergei/RiderProjects/ToDoTask/ToDoTask/Views/AddTaskPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoTask.Views.AddTaskPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/AddTaskPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/AddTaskPage.xaml
+
+[/Users/sergei/RiderProjects/ToDoTask/ToDoTask/Views/EditTaskPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoTask.Views.EditTaskPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/EditTaskPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/EditTaskPage.xaml
+
+[/Users/sergei/RiderProjects/ToDoTask/ToDoTask/Views/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoTask.Views.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/MainPage.xaml
+
+[/Users/sergei/RiderProjects/ToDoTask/ToDoTask/Views/ShowTask.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ToDoTask.Views.ShowTask.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ShowTask.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ShowTask.xaml

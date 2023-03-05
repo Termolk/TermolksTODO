@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:ToDoTask.ViewModel"
+             x:Class="ToDoTask.Views.EditTaskPage" >
+    <ContentPage.BindingContext>
+            <viewModel:MainViewModel />
+    </ContentPage.BindingContext>
+    
+    <StackLayout Margin="10">
+        <Label Text="Title:" FontSize="Medium" VerticalOptions="Center" Margin="0,0,0,10"/>
+        <Entry Text="{Binding CurrentTitle}" Placeholder="Task title" Margin="0,0,0,10"/>
+        <Label Text="Description:" FontSize="Medium" VerticalOptions="Center" Margin="0,0,0,10"/>
+        <Editor Text="{Binding CurrentDescription}" Placeholder="Task description" Margin="0,0,0,10" AutoSize="TextChanges"/>
+        <Label Text="Priority:" FontSize="Medium" VerticalOptions="Center" Margin="0,0,0,10"/>
+        <Picker ItemsSource="{Binding Priorities}" SelectedItem="{Binding CurrentPriority}" Margin="0,0,0,10"/>
+        <Button Text="Save" Command="{Binding SaveCommand}" Margin="0,0,0,10" BackgroundColor="#007AFF" TextColor="White"/>
+    </StackLayout>
+</ContentPage>
